@@ -3,7 +3,7 @@
 dokku postgres:create ${1}-db
 dokku postgres:link ${1}-db ${1}
 
-RESULT=`dokku config:show proj-happycows | egrep "^DATABASE_URL"`
+RESULT=`dokku config:show ${1} | egrep "^DATABASE_URL"`
 PASSWORD=`echo "$RESULT" |  awk -F[:@] '{print $4}'`
 DATABASE=`echo "$RESULT" |  awk -F[/] '{print $4}'`
 
