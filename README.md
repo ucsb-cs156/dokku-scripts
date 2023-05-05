@@ -58,4 +58,27 @@ Scripts to help with UCSB ECI's installation of Dokku
    from the Google Developer Console, and the script will set the appropriate environment variables
    for you (`GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`).
    
+   Example usage (actual secrets redacted):
    
+   ```
+   pconrad@dokku-00:~/dokku-scripts$ ./google-oauth.sh proj-courses
+   Enter Google Client Id: 30574869948-9ec5i62vc7bdc0dlpm2blcmep7hns6hm.apps.googleusercontent.com
+   Enter Google Client Secret: GOCSPX-kNfhoFAKEjH9FAKEyifsoa3
+   -----> Setting config vars
+          GOOGLE_CLIENT_ID:  30574869948-9ec5i62vc7bdc0dlpm2blcmep7hns6hm.apps.googleusercontent.com
+   -----> Setting config vars
+          GOOGLE_CLIENT_SECRET:  GOCSPX-kNfhoFAKEjH9FAKEyifsoa3
+   =====> proj-courses env vars
+   ADMIN_EMAILS:            phtcon@ucsb.edu,avishekde@ucsb.edu,vivianross@ucsb.edu,bzamoraflores@ucsb.edu,andrewpeng@ucsb.edu,rbriggs@ucsb.edu
+   DATABASE_URL:            postgres://postgres:9954dFAKEs9dffFAKE88sdsef@dokku-postgres-proj-courses-db:5432/proj_courses_db
+   DOKKU_PROXY_PORT:        80
+   DOKKU_PROXY_PORT_MAP:    http:80:5000 https:443:5000
+   DOKKU_PROXY_SSL_PORT:    443
+   GOOGLE_CLIENT_ID:        30574869948-9ec5i62vc7bdc0dlpm2blcmep7hns6hm.apps.googleusercontent.com
+   GOOGLE_CLIENT_SECRET:    GOCSPX-kNfhoFAKEjH9FAKEyifsoa3
+   JDBC_DATABASE_PASSWORD:  9954dFAKEs9dffFAKE88sdsef
+   JDBC_DATABASE_URL:       jdbc:postgresql://172.17.0.8:5432/proj_happycows_db
+   JDBC_DATABASE_USERNAME:  postgres
+   PRODUCTION:              true
+   pconrad@dokku-00:~/dokku-scripts$ 
+   ```
