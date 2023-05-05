@@ -5,7 +5,7 @@ Scripts to help with UCSB ECI's installation of Dokku
 
 1. On your dokku machine, clone this repo:
    ```
-   git clone git clone https://github.com/ucsb-cs156/dokku-scripts.git
+   git clone https://github.com/ucsb-cs156/dokku-scripts.git
    ```
 2. After creating an app with `dokku apps:create my-app`, you can **set up https** by typing:
 
