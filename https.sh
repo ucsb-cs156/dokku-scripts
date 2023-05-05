@@ -11,6 +11,7 @@ if [ "$#" -ne 2 ]; then
     exit 1
 fi
 
+dokku config:set --no-restart ${1} PRODUCTION=true
 dokku letsencrypt:set ${1} email ${2}
 dokku letsencrypt:enable ${1}
 dokku urls ${1}
