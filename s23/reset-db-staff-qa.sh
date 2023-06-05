@@ -97,8 +97,8 @@ function reset_db_staff_qa() {
     unlink_and_destroy_db dokku-${dokku} proj-${proj}${suffix}
     db dokku-${dokku} proj-${proj}${suffix}
     echo "restarting app..."
-    ssh $host dokku ps:start ${proj}${suffix}
-    
+    ssh $host dokku ps:start proj-${proj}${suffix}
+        
     echo For team ${team}: Database reset for ${dokku_url}
 }
 

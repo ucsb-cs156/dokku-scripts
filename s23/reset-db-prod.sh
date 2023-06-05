@@ -98,7 +98,7 @@ function reset_db_prod() {
 
     unlink_and_destroy_db dokku-${dokku} proj-${proj}${suffix}
     db dokku-${dokku} proj-${proj}${suffix}
-    ssh $host dokku ps:start ${app}${suffix}
+    ssh $host dokku ps:start proj-${proj}${suffix}
     
     echo For team ${team}: Database reset for ${dokku_url}
 }
