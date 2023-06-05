@@ -26,7 +26,7 @@ function team2dokku {
     T2D[7pm-2]=10
     T2D[7pm-3]=11
     T2D[7pm-4]=12
-    echo ${T2D[$team]}
+    echo ${T2D[$team]}.cs.ucsb.edu
 }
 
 function team2proj {
@@ -65,7 +65,7 @@ proj=`team2proj $team`
 dokku=`team2dokku $team`
 echo deploy dokku-${dokku} proj-${proj}-staff-qa    https://github.com/ucsb-cs156-s23/proj-${proj}-s23-${team}.git ${branch}
 deploy dokku-${dokku} proj-${proj}-staff-qa    https://github.com/ucsb-cs156-s23/proj-${proj}-s23-${team}.git ${branch}
-echo For team ${team}: branch ${branch} deployed at https://proj-${proj}-staff-qa.dokku-${dokku}.cs.ucsb.edu
+echo For team ${team}: branch ${branch} deployed at https://proj-${proj}-staff-qa.dokku-${dokku}
 
 
 
